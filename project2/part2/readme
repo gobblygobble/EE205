@@ -1,0 +1,12 @@
+20160609 정진하 Project 2b
+
+1. Started: 2017.10.07 9pm
+   Finished: 2017.10.13 11pm
+
+2. First, I parse through the files to sort the receiver messages in the right order, inside a linked list.
+   Then, I read, starting from the front of the linked list, to print the message and raise a warning sign if some message is missing. Every time I read a message, I delete that element.
+
+3. single_receiver took 309.454 seconds, and the double_receiver took 335.714 seconds.
+   The double_receiver is a bit slower than single_receiver. This seems to be because first, the strength of doubly linked lists comes when trying to look for the 'before' or 'previous' element. In my algorithm, I do not try to look for the previous element. Because the input_large file is received in an already organized way, this is the 'worst-time case' for my algorithm. I could have used insert_before or started to look from the back for the case of the doubly linked list, but this would only change the worst-time case, rather than enhancing the time taken for the worst-time case.
+
+4. In the two receiver .cpp files, I erased the original function I had newly defined.

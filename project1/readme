@@ -1,0 +1,29 @@
+20160609 정진하
+
+1. Started: 2017.9.15.5pm
+   First draft finished: 2017.9.19.1pm
+   Final draft finished: 2017.9.19.7pm(X)
+   Final draft finished (including pure virtual void functions): 2017. 9. 24.6pm
+
+2. If any invalid inputs were given in main(), an error message was sent to cerr, and the user went back to the initial state to choose which action to execute, using goto.
+
+3. Student ID number must be an eight-digit positive integer, just like in KAIST.
+   A student's name nor (a graduate student's) lab name may be an empty string.
+   A(n) (undergraduate) student's freshmen class must range from 1 to 31, just like in KAIST.
+   The index for the compare_student() must range from 0 to 299, because it is the index of an array of size 300.
+
+4. In the main.cpp code provided, there happened to be a typo on lines 121 and 129.
+   I believe the functions should have been myman.delete_student();
+
+5. I looked up a lot of std::string related functions on Google (most of which lead me to Stackoverflow).
+
+6. I used getline() to get the whole user input in getting the "formatted" inputs.
+   I defined them at the end of main.cpp file.
+   I used getline twice, because right after std::cin >>, a newline is left for getline() to read, making it not wait for the user.
+
+7. I asked on StackOverflow about how to overload operators in classes with pure virtual functions. Someone there told me to change my:
+   bool operator(Student student1, Student student2);
+   to
+   bool operator(const Student& student1, const Student& student2);
+   Asked & fixed on 2017.9.24.6pm
+

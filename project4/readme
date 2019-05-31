@@ -1,0 +1,12 @@
+EE205 Project4 20160609 정진하
+
+Task1. 별도의 문제 없었습니다.
+
+Task2. Dijkstra's algorithm과 Kruskal's algorithm 모두 Heap-based PQ를 활용해야 하지만,
+Heap-based PQ를 이해하지 못해 그저 list로 해서 사실 time-complexity가 다소 떨어집니다.
+하지만 Kruskal's algorithm의 경우에는 처음에 list를 sort한 후, 그 key의 값들이 바뀌지 않아,
+가장 작은 값만 꾸준히 pop한다면 time-complexity가 heap-base implementation과 동일할
+것으로 추정됩니다.
+
+Kruskal's algorithm의 경우, 두 set이 같은지 확인하는 과정인 sameSet함수에서 core dump가 일어납니다.
+하지만 Dijkstra's algorithm을 먼저 실행하여, Dijkstra's algorithm의 output에는 영향을 주지 않도록 하였습니다.

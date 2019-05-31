@@ -1,0 +1,20 @@
+1. 20160609 정진하
+
+2. Standard Library에 내장된 list를 활용하였습니다.
+
+3. 조교님께서 project 3 update 때 제공해주신 코드를 쓰지 않고,
+   원래 주셨던 코드를 사용하였습니다.
+   
+4. 본래의 replace()는 사용하지 않았고,
+   replace_all()을 스페이스를 인식한 버전으로 바꾼
+   modified_replace_all()을 만들어 사용하였습니다.
+   
+5. 제가 만든 command.txt로 처음 시험해본 결과 yimacs는 0.126ms,
+   yimacs_linked_list는 0.074ms가 나와 당황했지만,
+   후에 그 command.txt의 커맨드 개수를 늘리고,
+   또 input text의 길이 또한 늘린 후에는,
+   yimacs는 2.63s, yimacs_linked_list는 5.22s가 걸린 것으로 보아,
+   크기가 큰 input에 대해서는 AVL Tree를 활용한 yimacs가
+   linked list를 활용한 yimacs(_linked_list)보다
+   빠르다는 것을 알 수 있었습니다.
+
